@@ -19,19 +19,18 @@
         android:id="@+id/tvTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="Get ready for"
-        android:textStyle="bold"
-        android:textSize="20sp"
         android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/flRestView"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/flProgressbar"
-
-
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <FrameLayout
-        android:id="@+id/flProgressbar"
+        android:id="@+id/flRestView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
@@ -78,18 +77,58 @@
 
         </LinearLayout>
     </FrameLayout>
+    <TextView
+        android:id="@+id/tvupExerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UpComing ExerciseName"
+        android:textColor="@color/gray"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flRestView"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/image"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_jumping_jacks"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tvExerciseName"
+        app:layout_constraintTop_toBottomOf="@id/toolBarExercise" />
+
+    <!-- Todo 2: We also add a textView for ExerciseName and position it below the imageview-->
+    <TextView
+        android:id="@+id/tvExerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ExerciseName"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/flExerciseView"
+        tools:visibility="visible" />
 
     <FrameLayout
         android:id="@+id/flExerciseView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
-        tools:visibility="invisible"
+        android:visibility="gone"
+        tools:visibility="visible"
         android:background="@drawable/item_circular_color_accent_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBarExercise">
+        app:layout_constraintTop_toBottomOf="@id/ivImage">
 
         <ProgressBar
             android:id="@+id/progressBarExercise"

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">workout</string>
     <string name="start_image">start Image</string>
+    <string name="image">image</string>
 </resources>
