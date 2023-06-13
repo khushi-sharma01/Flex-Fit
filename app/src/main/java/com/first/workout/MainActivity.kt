@@ -28,6 +28,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+       val flBmiButton : FrameLayout = findViewById(R.id.flBMI)
+        flBmiButton.setOnClickListener{
+            val intent = Intent(this, BMIActivity::class.java)
+            startActivity(intent)
+
+        }
+        val flhistoryButton : FrameLayout = findViewById(R.id.flHistory)
+        flhistoryButton.setOnClickListener{
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+
+        }
 
     }
 
