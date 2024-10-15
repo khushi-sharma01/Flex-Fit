@@ -10,6 +10,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/toolbar_history_activity"
         android:layout_width="match_parent"
+
         android:layout_height="?android:attr/actionBarSize"
         android:background="#FFFFFF" />
 
